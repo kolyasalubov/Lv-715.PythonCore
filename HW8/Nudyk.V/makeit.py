@@ -9,12 +9,18 @@
 
 
 def zero_fuel(distance_to_pump, mpg, fuel_left):
+    ''' Return true if it possible to get to the nearest 
+        gas station before the car runs out of fuel'''
+
     return (True if (mpg * fuel_left >= distance_to_pump) else False)
 
 
 print(zero_fuel(49, 25, 2))
 
 def zero_fuel1(distance_to_pump, mpg, fuel_left):
+    ''' Return true if it possible to get to the nearest 
+        gas station before the car runs out of fuel'''
+
     if mpg * fuel_left >= distance_to_pump:
         return True
     else:
@@ -23,6 +29,10 @@ def zero_fuel1(distance_to_pump, mpg, fuel_left):
 print(zero_fuel1(50, 25, 2))
 
 def zero_fuel2(distance_to_pump, mpg, fuel_left):
+    ''' Return true if it possible to get to the nearest    
+        gas station before the car runs out of fuel'''
+
     return mpg * fuel_left >= distance_to_pump
+
 
 print(zero_fuel2(51, 25, 2))
