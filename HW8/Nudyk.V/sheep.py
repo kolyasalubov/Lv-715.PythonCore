@@ -2,6 +2,8 @@
 # We need a function that counts the number of sheep present in the array (true means present).
 
 def count_sheeps(sheep):
+    ''' Counts the ammount of sheep inside a list'''
+    
     return sheep.count(True)
     
 
