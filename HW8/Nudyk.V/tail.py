@@ -9,5 +9,7 @@
 
 
 def correct_tail(body, tail):
+    ''' Check if the second argument is the same as the last charecter of the first argument
+    '''
     return body[-1] == tail
 print(correct_tail('hello', 'o'))
