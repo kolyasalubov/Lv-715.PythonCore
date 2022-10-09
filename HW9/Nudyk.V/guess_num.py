@@ -4,7 +4,7 @@ def guess_num():
     ''' Executes a game of guessing the num between 1 and 10000
     '''
 
-    random_num = randint(9999, 10000)
+    random_num = randint(1, 10000)
     user_num = int(input('Guess the frickin number form 1 to 10000: '))
     while user_num != random_num:
         if user_num > random_num:
