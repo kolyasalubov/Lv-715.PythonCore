@@ -11,13 +11,5 @@ class Ghost:
         self.color = choice(['white', 'yellow', 'purple', 'red'])
 
 
-    # def color(self):
-    #     colors = ['white', 'yellow', 'purple', 'red']
-    #     self.name = randint(1,4)
-    #     return self.name
-
-
-
 ghost = Ghost()
-
 print(ghost.color)
