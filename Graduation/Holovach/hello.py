@@ -24,6 +24,6 @@ def table(name = "LOGS"):
 @app.route('/hello/<name>')
 def hello(name=None):
     
-    list_items = Analitics().query('LOGS')
+    list_items = Analitics().raw_query("SELECT * FROM LOGS")
     
     return render_template('hello.html', name=name , w = list_items)
