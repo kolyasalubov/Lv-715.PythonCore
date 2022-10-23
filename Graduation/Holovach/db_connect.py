@@ -19,7 +19,6 @@ class DbConnection():
         self.user = user
         self.password = password
         self.trust = trust
-        # self.connect()
     
     def connect(self):
         self.cnxn_str = (

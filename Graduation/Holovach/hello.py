@@ -15,14 +15,15 @@ def table(name = "LOGS"):
     r= Analitics()
     to_html = r.query(name).to_html(index=False)
     text_t = open("templates/table.html", "w")
-    text_t.write('<a href="/">Home</a>'+to_html)
+    text_t.write('<a href="/">Home</a><br>' + to_html)
     text_t.close()
+    r.log("Table created")
     return render_template('/table.html')
 
 @app.route('/hello/')
 @app.route('/hello/<name>')
 def hello(name=None):
     
-    list_items = Analitics().query('LOGS')#.to_html(index=False)
+    list_items = Analitics().query('LOGS')
     
     return render_template('hello.html', name=name , w = list_items)

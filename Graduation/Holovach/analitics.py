@@ -1,5 +1,6 @@
 from db_connect import DbConnection
 import pandas as pd
+from datetime import datetime
 
 class Analitics():
 
@@ -11,12 +12,11 @@ class Analitics():
         self.data = pd.read_sql(self.query, self.db_connect.connect())
         return self.data#['STC_NAME']
 
-
-r= Analitics()
-to_html = r.query('STC').to_html(index=False)
-text_t = open("table.html", "w")
-text_t.write(to_html)
-text_t.close()
-
+    def log(self, txt="Table created"):
+            self.sql = f"INSERT INTO LOGS (DATE_OF_LOGGING, LOG_DATA) VALUES ('{datetime.now()}', '{txt}')"
+            self.cursor = self.db_connect.connect().cursor()
+            self.cursor.execute(self.sql)
+            self.cursor.commit()
+            return True
 
 
