@@ -1,4 +1,6 @@
-from flask import Flask
+# from crypt import methods
+# from urllib import request
+from flask import Flask, request
 from flask import render_template
 from analitics import Analitics
 
@@ -19,6 +21,16 @@ def table(name = "LOGS"):
     text_t.close()
     r.log("Table created")
     return render_template('/table.html')
+
+@app.route('/query/', methods=['POST', 'GET'])
+# @app.route('/query/<name>')
+def query(name = "LOGS"):
+    r= Analitics()
+    if request.method == 'POST':
+        # table = request.form['table']
+        return '-----'.join([ 'key : '+ x + '\t value : ' + y +'\n' for x,y in request.form.items()])
+    else:
+        return render_template('/query.html')
 
 @app.route('/hello/')
 @app.route('/hello/<name>')

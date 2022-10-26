@@ -1,3 +1,8 @@
+{% extends 'temp.html'%}
+
+
+{%block body%}
+
 <a href="/hello/">Test</a>
 <br>
 <a href="/table/">Default</a>
@@ -17,6 +22,9 @@
 <a href="/table/STATIONS">STATIONS</a>
 <br>
 <a href="/table/RawAvia">RAW</a>
+<br><br>
+<a href="/query/">Custome selection</a>
 <br>
 
-<img src="db_schema.jpg" alt="DB SCHEMA">
+<img src="{{url_for('static', filename='db_schema.jpg')}}" alt="DB SCHEMA">
+{%endblock%}
