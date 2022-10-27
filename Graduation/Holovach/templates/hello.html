@@ -1,0 +1,22 @@
+<!doctype html>
+<title>Hello from Flask</title>
+<a href="/">Home</a>
+{% if name %}
+  <h1>Hello, {{ name }}!</h1>
+{% else %}
+  <h1>Hello, World!</h1>
+{% endif %}
+
+
+<table border = 1>
+  {% for value in w %}
+  <tr>
+    {% for key in value %}
+      <td>
+        {{ key }}
+      </td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table>
+

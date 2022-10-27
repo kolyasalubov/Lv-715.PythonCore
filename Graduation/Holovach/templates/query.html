@@ -1,0 +1,33 @@
+{% extends 'temp.html'%}
+
+{%block body%}
+<a href="/">Home</a><br>
+
+<form action="" method="post">
+
+    <!-- <input type="text" name="query" id="query" value=""> -->
+
+    <select name="table" id="table">
+        <option value="AIRCRAFTS">AIRCRAFTS</option>
+        <option value="COUNTRIES">COUNTRIES</option>
+        <option value="LEG">LEG</option>
+        <option value="LEG_CLASS">LEG_CLASS</option>
+        <option value="LEG_PAXCAT">LEG_PAXCAT</option>
+        <option value="STC">STC</option>
+        <option value="STATIONS">STATIONS</option>
+        <option value="RAW">RAW</option>
+    </select>
+
+    <fieldset>      
+        <legend>What fields do you want to select?</legend>      
+        <input type="checkbox" name="*" value="*">*<br>      
+        <input type="checkbox" name="FLD_ID" value="FLD_ID">Flight ID<br>      
+        <input type="checkbox" name="DATOP" value="DATOP">Flight Date<br>      
+        <input type="checkbox" name="DEPSTN" value="DEPSTN">Departure Station<br>      
+    </fieldset>  
+
+    <input type="submit" value="SELECT">
+
+</form>
+
+{%endblock%}
