@@ -1,0 +1,6 @@
+name = input("Як тебе звати?\n")
+age = input("Скільки тобі років?\n")
+Where_do_you_live = input("Де ти мешкаєш?\n")
+print("Доброго дня,", name)
+print("Твій вік,", age)
+print("Ви живете в,", Where_do_you_live)

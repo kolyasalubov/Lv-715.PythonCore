@@ -1,4 +1,9 @@
 
+
+.idea
+
+
+
 # Folder view configuration files
 .DS_Store
 Desktop.ini
@@ -13,12 +18,31 @@ Thumbs.db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
+
+
+*.py[cod]
+
 *$py.class
-api_key.py
-.idea
+
+
 # C extensions
 *.so
+*$py.class
+
+api_key.py
+.idea
+
+
+.DS_Store
+
+*$py.class
+
+
+# C extensions
+*.so
+
 # Distribution / packaging
+weather_key.py
 .Python
 build/
 develop-eggs/
@@ -139,3 +163,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+*.DS_Store

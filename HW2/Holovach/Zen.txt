@@ -1,0 +1,17 @@
+Zen of Python!
+
+1.Beautiful is better than ugly.
+
+2.Explicit is better than implicit.
+
+3.Simple is better than complex.
+
+7.Readability counts.
+
+8.Special cases aren't special enough to break the rules.
+
+16.Although never is often better than *right* now.
+
+19.Namespaces are one honking great idea -- let's do more of those!
+50.There should be one-- and preferably only one --obvious way to do it.
+
