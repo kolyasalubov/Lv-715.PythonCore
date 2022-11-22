@@ -1,0 +1,30 @@
+{% extends 'temp.html'%}
+
+
+{%block body%}
+
+<a href="/hello/">Test</a>
+<br>
+<a href="/table/">Default</a>
+<br>
+<a href="/table/AIRCRAFTS">Aircrafts</a>
+<br>
+<a href="/table/COUNTRIES">Countries</a>
+<br>
+<a href="/table/LEG">LEG</a>
+<br>
+<a href="/table/LEG_CLASS">Leg Class</a>
+<br>
+<a href="/table/LEG_PAXCAT">LEG Paxcat</a>
+<br>
+<a href="/table/STC">STC</a>
+<br>
+<a href="/table/STATIONS">STATIONS</a>
+<br>
+<a href="/table/RawAvia">RAW</a>
+<br><br>
+<a href="/query/">Custome selection</a>
+<br>
+
+<img src="{{url_for('static', filename='db_schema.jpg')}}" alt="DB SCHEMA">
+{%endblock%}
