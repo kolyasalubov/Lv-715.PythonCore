@@ -6,7 +6,6 @@ from init import app, db, manager
 from user import User
 from article import Article
 
-
 @manager.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
