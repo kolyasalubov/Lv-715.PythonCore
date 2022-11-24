@@ -21,14 +21,14 @@ async def make_changes_command(message: types.Message):
     await bot.send_message(message.from_user.id, 'Ви зайшли в режим адміністратора', reply_markup=admin_kb.button_case_admin)
     await message.delete()
 
-# @dp.message_hendler(commands="Загрузить", state=None)
+# @dp.message_hendler(commands="Загрузити", state=None)
 async def cm_start(message: types.Message):
     if message.from_user.id == ID:
         await FSMAdmin.photo.set()
         await message.reply('Загрузити фото')
 
-# @dp.message_handler(state="*", commands='Отмена')
-# @dp.message_handler(Text(equals='Отмена', ignore_case=True), state="*")
+# @dp.message_handler(state="*", commands='Відміна')
+# @dp.message_handler(Text(equals='Відміна', ignore_case=True), state="*")
 async def cancel_handler(message: types.Message, state: FSMContext):
     if message.from_user.id == ID:
         current_state = await state.get_state()
@@ -84,8 +84,8 @@ async def delete_item(message: types.Message):
 
 def register_hendlers_admin(dp: Dispatcher):
     dp.register_message_handler(cm_start, commands=['Загрузити'], state=None)
-    dp.register_message_handler(cancel_handler, state="*", commands='Отмена')
-    dp.register_message_handler(cancel_handler, Text(equals='Отмена', ignore_case=True), state='*')
+    dp.register_message_handler(cancel_handler, state="*", commands='Відміна')
+    dp.register_message_handler(cancel_handler, Text(equals='Відміна', ignore_case=True), state='*')
     dp.register_message_handler(load_photo, content_types=['photo'], state=FSMAdmin.photo)
     dp.register_message_handler(load_name, state=FSMAdmin.name)
     dp.register_message_handler(load_description, state = FSMAdmin.description)

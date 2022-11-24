@@ -13,10 +13,10 @@ async def command_start(message: types.Message):
         await message.reply('Напишіть боту в ЛС:\nhttps://t.me/Sushi_FreshBot')
 
 
-# @dp.message_handler(commands=['Режим_работы'])
+# @dp.message_handler(commands=['Режим_работи'])
 async def sushi_open_command(message: types.Message):
-    await bot.send_message(message.from_user.id, 'Нд-Чт с 9:00 до 20:00, Пя-Сб с 10:00 до 23:00', reply_markup=kb_client)
-# @dp.message_handler(commands=['Pасположение'])
+    await bot.send_message(message.from_user.id, 'Нд-Чт с 9:00 до 20:00, Птн-Сб с 10:00 до 23:00', reply_markup=kb_client)
+# @dp.message_handler(commands=['Контакти'])
 async def sushi_place_command(message: types.Message):
     await bot.send_message(message.from_user.id, 'Вул. Чорновола 12', reply_markup=kb_client)
 
